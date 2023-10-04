@@ -6,6 +6,7 @@ import { Grid, GridColumn } from '@progress/kendo-react-grid';
 import { Window, Dialog } from '@progress/kendo-react-dialogs';
 import {Oval} from "react-loader-spinner";
 import { Button } from "@progress/kendo-react-buttons";
+import {users} from './constants/users'
 
 class App extends Component {
 
@@ -32,33 +33,7 @@ class App extends Component {
       show: false,
       windowVisible: false,
       gridClickedRow: {},
-
-      users: [
-        {
-          "UserName": "John5834",
-          "FullName": "John Doe",
-          "LastLogin": "May-03-2022",
-          "Enabled": "Yes"
-        },
-        {
-          "UserName": "Dave5923",
-          "FullName": "Dave Mill",
-          "LastLogin": "May-03-2022",
-          "Enabled": "Yes"
-        },
-        {
-          "UserName": "Mick4923",
-          "FullName": "Mick Rogers",
-          "LastLogin": "May-03-2022",
-          "Enabled": "Yes"
-        },
-        {
-          "UserName": "Love4923",
-          "FullName": "Love Bratt",
-          "LastLogin": "May-03-2022",
-          "Enabled": "No"
-        }
-      ]
+      users:users
     }
   }
 
@@ -194,7 +169,7 @@ class App extends Component {
     )
   }
 
-  
+
 
   render() {
     if (this.state.isLoading===true) {
